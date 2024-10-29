@@ -11,9 +11,6 @@
         android:id="@+id/btn_createyouown"
         android:title="Create You Own" />
     <item
-        android:id="@+id/btn_mymemes"
-        android:title="My Memes" />
-    <item
         android:id="@+id/btn_gallery"
         android:title="Gallery" />
 </menu>
