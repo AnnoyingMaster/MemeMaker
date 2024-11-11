@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Meme_maker.iml" filepath="$PROJECT_DIR$/.idea/modules/Meme_maker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Meme_maker.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Meme_maker.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Meme_maker.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Meme_maker.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Meme_maker.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Meme_maker.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Meme_maker.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Meme_maker.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>

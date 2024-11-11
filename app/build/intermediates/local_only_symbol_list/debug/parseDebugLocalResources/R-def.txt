@@ -1,0 +1,29 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+dimen text_margin
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id btn_creatememe
+id btn_gallery
+id btn_memetemplates
+id fooldal_layout
+id fragmentContainerView
+id galleryRecyclerView
+id main
+id memeImageView
+id memeTextView
+id toolbar
+layout activity_main
+layout fooldal
+layout fragment_gallery
+layout fragment_gallery_list
+menu main_menu
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.Meme_maker
+style Theme.Meme_maker
+xml backup_rules
+xml data_extraction_rules
