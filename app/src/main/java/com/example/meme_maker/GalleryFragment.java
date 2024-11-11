@@ -14,9 +14,10 @@ import android.view.ViewGroup;
 
 import com.example.meme_maker.placeholder.PlaceholderContent;
 
-/**
- * A fragment representing a list of Items.
- */
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class GalleryFragment extends Fragment {
 
     // TODO: Customize parameter argument names
@@ -24,10 +25,10 @@ public class GalleryFragment extends Fragment {
     // TODO: Customize parameters
     private int mColumnCount = 1;
 
-    /**
-     * Mandatory empty constructor for the fragment manager to instantiate the
-     * fragment (e.g. upon screen orientation changes).
-     */
+    private List<Item> memeList;
+    private RecyclerView galleryRecyclerView;
+    private GalleryItemRecyclerViewAdapter adapter;
+
     public GalleryFragment() {
     }
 
@@ -54,9 +55,22 @@ public class GalleryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_gallery_list, container, false);
+        memeList = new ArrayList<>();
+
+        memeList.add(new Item("kép1", "kép1szövege" ));
+        memeList.add(new Item("kép2", "kép2szövege" ));
+        memeList.add(new Item("kép3", "kép3szövege" ));
+
+        galleryRecyclerView = view.findViewById(R.id.galleryRecyclerView);
+        adapter = new GalleryItemRecyclerViewAdapter(memeList);
+        RecyclerView.LayoutManager layoutManager =
+                new LinearLayoutManager(getContext());
+        galleryRecyclerView.setLayoutManager(layoutManager);
+        galleryRecyclerView.setAdapter(adapter);
+
 
         // Set the adapter
-        if (view instanceof RecyclerView) {
+        /*if (view instanceof RecyclerView) {
             Context context = view.getContext();
             RecyclerView recyclerView = (RecyclerView) view;
             if (mColumnCount <= 1) {
@@ -65,7 +79,7 @@ public class GalleryFragment extends Fragment {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
             recyclerView.setAdapter(new GalleryItemRecyclerViewAdapter(PlaceholderContent.ITEMS));
-        }
+        }*/
         return view;
     }
 }

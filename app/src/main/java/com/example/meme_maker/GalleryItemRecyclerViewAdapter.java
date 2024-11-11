@@ -1,15 +1,18 @@
 package com.example.meme_maker;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.meme_maker.placeholder.PlaceholderContent.PlaceholderItem;
 import com.example.meme_maker.databinding.FragmentGalleryBinding;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,24 +21,23 @@ import java.util.List;
  */
 public class GalleryItemRecyclerViewAdapter extends RecyclerView.Adapter<GalleryItemRecyclerViewAdapter.ViewHolder> {
 
-    private final List<PlaceholderItem> mValues;
+    private final List<Item> mValues;
 
-    public GalleryItemRecyclerViewAdapter(List<PlaceholderItem> items) {
+    public GalleryItemRecyclerViewAdapter(List<Item> items) {
         mValues = items;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
-        return new ViewHolder(FragmentGalleryBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
-
+        View itemView = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.fragment_gallery, parent, false);
+        return new ViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
-        holder.mItem = mValues.get(position);
-        holder.mIdView.setText(mValues.get(position).id);
-        holder.mContentView.setText(mValues.get(position).content);
+        Item item = mValues.get(position);
+        holder.memeTextView.setText(item.getTitle());
     }
 
     @Override
@@ -44,19 +46,16 @@ public class GalleryItemRecyclerViewAdapter extends RecyclerView.Adapter<Gallery
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public final TextView mIdView;
-        public final TextView mContentView;
-        public PlaceholderItem mItem;
+        public final TextView memeTextView;
+        public final ImageView memeImageView;
 
-        public ViewHolder(FragmentGalleryBinding binding) {
-            super(binding.getRoot());
-            mIdView = binding.itemNumber;
-            mContentView = binding.content;
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+            memeTextView = itemView.findViewById(R.id.memeTextView);
+            memeImageView = itemView.findViewById(R.id.memeImageView);
+
         }
 
-        @Override
-        public String toString() {
-            return super.toString() + " '" + mContentView.getText() + "'";
-        }
+
     }
 }
