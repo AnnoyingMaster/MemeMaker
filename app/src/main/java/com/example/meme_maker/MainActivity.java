@@ -12,7 +12,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-
+//TODO: Meg kell csinálni dik : D 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
