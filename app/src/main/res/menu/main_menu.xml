@@ -20,4 +20,5 @@
         android:id="@+id/btn_gallery"
         android:title="Gallery"
         app:showAsAction="never"/>
+
 </menu>
