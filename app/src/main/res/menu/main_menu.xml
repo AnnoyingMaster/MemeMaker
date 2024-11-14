@@ -8,13 +8,16 @@
         app:showAsAction="always"/>
     <item
         android:id="@+id/btn_creatememe"
-        android:title="Create Meme" />
+        android:title="Create Meme"
+        app:showAsAction="never"/>
 
     <item
         android:id="@+id/btn_memetemplates"
-        android:title="Meme Templates" />
+        android:title="Meme Templates"
+        app:showAsAction="never"/>
 
     <item
         android:id="@+id/btn_gallery"
-        android:title="Gallery" />
+        android:title="Gallery"
+        app:showAsAction="never"/>
 </menu>
