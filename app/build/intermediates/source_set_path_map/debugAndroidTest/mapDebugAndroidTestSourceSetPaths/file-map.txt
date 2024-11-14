@@ -1,0 +1,10 @@
+com.example.meme_maker.test.app-room-testing-2.3.0-0 C:\Users\molna\.gradle\caches\8.9\transforms\49432f09f185ba4b1aeed5490b05e091\transformed\room-testing-2.3.0\res
+com.example.meme_maker.test.app-annotation-experimental-1.4.1-1 C:\Users\molna\.gradle\caches\8.9\transforms\7aa853e5c5f317a75d847f268f441996\transformed\annotation-experimental-1.4.1\res
+com.example.meme_maker.test.app-tracing-1.2.0-2 C:\Users\molna\.gradle\caches\8.9\transforms\990d9706f8e73449b9813ac6da555e20\transformed\tracing-1.2.0\res
+com.example.meme_maker.test.app-room-runtime-2.3.0-3 C:\Users\molna\.gradle\caches\8.9\transforms\cf8f7cbdf4733c14e865f7195b4590e0\transformed\room-runtime-2.3.0\res
+com.example.meme_maker.test.app-core-1.5.0-4 C:\Users\molna\.gradle\caches\8.9\transforms\d150652bc44b13bd17163afc99fcf0f4\transformed\core-1.5.0\res
+com.example.meme_maker.test.app-core-runtime-2.2.0-5 C:\Users\molna\.gradle\caches\8.9\transforms\f5aa13747d14b2f572437e0cabc02267\transformed\core-runtime-2.2.0\res
+com.example.meme_maker.test.app-androidTest-6 C:\Users\molna\Desktop\MemeMaker\app\build\generated\res\resValues\androidTest\debug
+com.example.meme_maker.test.app-mergeDebugAndroidTestResources-7 C:\Users\molna\Desktop\MemeMaker\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.meme_maker.test.app-mergeDebugAndroidTestResources-8 C:\Users\molna\Desktop\MemeMaker\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.meme_maker.test.app-debugAndroidTest-9 C:\Users\molna\Desktop\MemeMaker\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources
