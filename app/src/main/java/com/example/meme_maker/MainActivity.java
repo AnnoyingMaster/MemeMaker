@@ -5,6 +5,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         loadFragment(new Main(), "Főoldal", false);
+        setTitle("Főoldal");
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -39,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(@NonNull Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
         return true;
     }
@@ -68,15 +70,19 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_home:
                 loadFragmentAndAddToBackStack(new Main(), "Főoldal");
+                setTitle("Főoldal");
                 return true;
             case R.id.btn_creatememe:
                 loadFragmentAndAddToBackStack(new CreateMemeFragment(), "Create Meme");
+                setTitle("Create your Meme");
                 return true;
             case R.id.btn_memetemplates:
                 loadFragmentAndAddToBackStack(new TemplateFragment(), "Templates");
+                setTitle("Templates");
                 return true;
             case R.id.btn_gallery:
                 loadFragmentAndAddToBackStack(new GalleryFragment(), "Gallery");
+                setTitle("Gallery");
                 return true;
         }
         return true;
