@@ -17,11 +17,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class GalleryItemRecyclerViewAdapter extends RecyclerView.Adapter<GalleryItemRecyclerViewAdapter.ViewHolder> {
+public class TemplateItemRecyclerViewAdapter extends RecyclerView.Adapter<TemplateItemRecyclerViewAdapter.ViewHolder> {
 
     private final List<Item> mValues;
 
-    public GalleryItemRecyclerViewAdapter(List<Item> items) {
+    public TemplateItemRecyclerViewAdapter(List<Item> items) {
         mValues = items;
     }
 
