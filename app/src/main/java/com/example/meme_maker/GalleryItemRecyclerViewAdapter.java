@@ -9,16 +9,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.meme_maker.placeholder.PlaceholderContent.PlaceholderItem;
 import com.example.meme_maker.databinding.FragmentGalleryBinding;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * {@link RecyclerView.Adapter} that can display a {@link PlaceholderItem}.
- * TODO: Replace the implementation with code for your data type.
- */
+
 public class GalleryItemRecyclerViewAdapter extends RecyclerView.Adapter<GalleryItemRecyclerViewAdapter.ViewHolder> {
 
     private final List<Item> mValues;
@@ -38,7 +36,12 @@ public class GalleryItemRecyclerViewAdapter extends RecyclerView.Adapter<Gallery
     public void onBindViewHolder(final ViewHolder holder, int position) {
         Item item = mValues.get(position);
         holder.memeTextView.setText(item.getTitle());
+        Glide.with(holder.itemView.getContext())
+                .load(item.getImage())
+                .into(holder.memeImageView);
     }
+
+
 
     @Override
     public int getItemCount() {
