@@ -5,14 +5,14 @@ public class Item {
 
 
     private  String title;
-    private String image;
+    private int image;
 
-    public Item(String image, String title) {
+    public Item(int image, String title) {
         this.image = image;
         this.title = title;
     }
 
-    public void setImage(String image) {
+    public void setImage( int image) {
         this.image = image;
     }
 
@@ -20,7 +20,7 @@ public class Item {
         this.title = title;
     }
 
-    public String getImage() {
+    public int getImage() {
         return image;
     }
 
