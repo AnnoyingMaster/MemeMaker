@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -30,6 +31,9 @@ public final class FragmentCreateMemeBinding implements ViewBinding {
   public final ImageButton btnTemplate;
 
   @NonNull
+  public final ImageView testImgView;
+
+  @NonNull
   public final TextView txtViewBrowse;
 
   @NonNull
@@ -40,12 +44,14 @@ public final class FragmentCreateMemeBinding implements ViewBinding {
 
   private FragmentCreateMemeBinding(@NonNull ConstraintLayout rootView,
       @NonNull ImageButton btnBrowse, @NonNull ImageButton btnCamera,
-      @NonNull ImageButton btnTemplate, @NonNull TextView txtViewBrowse,
-      @NonNull TextView txtViewGallery, @NonNull TextView txtViewTemplate) {
+      @NonNull ImageButton btnTemplate, @NonNull ImageView testImgView,
+      @NonNull TextView txtViewBrowse, @NonNull TextView txtViewGallery,
+      @NonNull TextView txtViewTemplate) {
     this.rootView = rootView;
     this.btnBrowse = btnBrowse;
     this.btnCamera = btnCamera;
     this.btnTemplate = btnTemplate;
+    this.testImgView = testImgView;
     this.txtViewBrowse = txtViewBrowse;
     this.txtViewGallery = txtViewGallery;
     this.txtViewTemplate = txtViewTemplate;
@@ -96,6 +102,12 @@ public final class FragmentCreateMemeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.testImgView;
+      ImageView testImgView = ViewBindings.findChildViewById(rootView, id);
+      if (testImgView == null) {
+        break missingId;
+      }
+
       id = R.id.txtViewBrowse;
       TextView txtViewBrowse = ViewBindings.findChildViewById(rootView, id);
       if (txtViewBrowse == null) {
@@ -115,7 +127,7 @@ public final class FragmentCreateMemeBinding implements ViewBinding {
       }
 
       return new FragmentCreateMemeBinding((ConstraintLayout) rootView, btnBrowse, btnCamera,
-          btnTemplate, txtViewBrowse, txtViewGallery, txtViewTemplate);
+          btnTemplate, testImgView, txtViewBrowse, txtViewGallery, txtViewTemplate);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

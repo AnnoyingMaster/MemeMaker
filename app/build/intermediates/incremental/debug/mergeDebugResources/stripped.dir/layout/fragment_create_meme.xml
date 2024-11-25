@@ -99,4 +99,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnTemplate" />
 
+    <ImageView
+        android:id="@+id/testImgView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="23dp"
+        tools:layout_editor_absoluteY="41dp"
+        android:contentDescription="Selected image"
+        tools:src="@tools:sample/avatars" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

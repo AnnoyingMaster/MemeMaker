@@ -34,6 +34,7 @@ id main
 id memeImageView
 id memeTextView
 id templatesRecyclerView
+id testImgView
 id toolbar
 id txtViewBrowse
 id txtViewCreate
