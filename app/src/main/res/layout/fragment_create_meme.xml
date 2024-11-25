@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2196F3"
+    android:backgroundTintMode="screen"
+    android:hapticFeedbackEnabled="false"
+    tools:context=".CreateMemeFragment">
+
+    <ImageButton
+        android:id="@+id/btnBrowse"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="105dp"
+        android:backgroundTint="#000000"
+        android:hapticFeedbackEnabled="true"
+        android:scaleType="fitStart"
+        android:src="@drawable/folder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtViewBrowse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto_bold"
+        android:hapticFeedbackEnabled="true"
+        android:includeFontPadding="true"
+        android:text=" Browse On Your Phone"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorLink="#000000"
+        android:textSize="24sp"
+        app:autoSizeTextType="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBrowse" />
+
+    <ImageButton
+        android:id="@+id/btnCamera"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#000000"
+        android:hapticFeedbackEnabled="true"
+        android:scaleType="fitStart"
+        android:src="@drawable/camera"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewBrowse" />
+
+    <TextView
+        android:id="@+id/txtViewTemplate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto_bold"
+        android:hapticFeedbackEnabled="true"
+        android:text="Create A Picture"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCamera" />
+
+    <ImageButton
+        android:id="@+id/btnTemplate"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#000000"
+        android:hapticFeedbackEnabled="true"
+        android:scaleType="fitStart"
+        android:src="@drawable/templte"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewTemplate" />
+
+    <TextView
+        android:id="@+id/txtViewGallery"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="60dp"
+        android:fontFamily="@font/roboto_bold"
+        android:hapticFeedbackEnabled="true"
+        android:text="Templates"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTemplate" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

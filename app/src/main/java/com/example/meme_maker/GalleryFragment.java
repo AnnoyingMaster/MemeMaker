@@ -1,18 +1,14 @@
 package com.example.meme_maker;
 
-import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.example.meme_maker.placeholder.PlaceholderContent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,7 +57,7 @@ public class GalleryFragment extends Fragment {
         memeList.add(new Item("kép2", "kép2szövege" ));
         memeList.add(new Item("kép3", "kép3szövege" ));
 
-        galleryRecyclerView = view.findViewById(R.id.galleryRecyclerView);
+        galleryRecyclerView = view.findViewById(R.id.templatesRecyclerView);
         adapter = new GalleryItemRecyclerViewAdapter(memeList);
         RecyclerView.LayoutManager layoutManager =
                 new LinearLayoutManager(getContext());
