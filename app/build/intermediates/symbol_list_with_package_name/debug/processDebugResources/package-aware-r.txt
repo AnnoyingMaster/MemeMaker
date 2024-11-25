@@ -3011,8 +3011,6 @@ drawable material_ic_keyboard_arrow_previous_black_24dp
 drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
-drawable memetemplate_1
-drawable memetemplate_10
 drawable memetemplate_11
 drawable memetemplate_12
 drawable memetemplate_13
@@ -3022,11 +3020,9 @@ drawable memetemplate_16
 drawable memetemplate_17
 drawable memetemplate_18
 drawable memetemplate_19
-drawable memetemplate_2
 drawable memetemplate_20
 drawable memetemplate_21
 drawable memetemplate_3
-drawable memetemplate_4
 drawable memetemplate_5
 drawable memetemplate_6
 drawable memetemplate_7

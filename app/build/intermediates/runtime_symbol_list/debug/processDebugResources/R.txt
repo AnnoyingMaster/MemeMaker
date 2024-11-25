@@ -3010,8 +3010,6 @@ int drawable material_ic_keyboard_arrow_previous_black_24dp 0x7f0800b1
 int drawable material_ic_keyboard_arrow_right_black_24dp 0x7f0800b2
 int drawable material_ic_menu_arrow_down_black_24dp 0x7f0800b3
 int drawable material_ic_menu_arrow_up_black_24dp 0x7f0800b4
-int drawable memetemplate_1 0x7f0800b5
-int drawable memetemplate_10 0x7f0800ee
 int drawable memetemplate_11 0x7f0800ef
 int drawable memetemplate_12 0x7f0800f0
 int drawable memetemplate_13 0x7f0800f1
@@ -3021,11 +3019,9 @@ int drawable memetemplate_16 0x7f0800f4
 int drawable memetemplate_17 0x7f0800f5
 int drawable memetemplate_18 0x7f0800f6
 int drawable memetemplate_19 0x7f0800f7
-int drawable memetemplate_2 0x7f0800f8
 int drawable memetemplate_20 0x7f0800f9
 int drawable memetemplate_21 0x7f0800fa
 int drawable memetemplate_3 0x7f0800fb
-int drawable memetemplate_4 0x7f0800fc
 int drawable memetemplate_5 0x7f0800fd
 int drawable memetemplate_6 0x7f0800fe
 int drawable memetemplate_7 0x7f0800ff
