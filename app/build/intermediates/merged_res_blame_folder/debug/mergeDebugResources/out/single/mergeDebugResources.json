@@ -1,106 +1,138 @@
 [
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-debug-35:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-37:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "com.example.meme_maker.app-debug-36:/drawable_plus.png.flat",
+        "source": "com.example.meme_maker.app-main-38:/drawable/plus.png"
     },
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-debug-35:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-37:\\drawable\\ic_launcher_background.xml"
+        "merged": "com.example.meme_maker.app-debug-36:/drawable_baseline_home_white_18dp.png.flat",
+        "source": "com.example.meme_maker.app-main-38:/drawable/baseline_home_white_18dp.png"
     },
     {
-        "merged": "com.example.meme_maker.app-debug-35:/layout_fragment_create_meme.xml.flat",
-        "source": "com.example.meme_maker.app-main-37:/layout/fragment_create_meme.xml"
+        "merged": "com.example.meme_maker.app-debug-36:/font_roboto_thin.xml.flat",
+        "source": "com.example.meme_maker.app-main-38:/font/roboto_thin.xml"
     },
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-debug-35:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-37:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.meme_maker.app-debug-36:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.meme_maker.app-main-38:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-debug-35:\\drawable_baseline_home_white_18dp.png.flat",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-37:\\drawable\\baseline_home_white_18dp.png"
+        "merged": "com.example.meme_maker.app-debug-36:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.meme_maker.app-main-38:/drawable/ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-debug-35:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-37:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "com.example.meme_maker.app-debug-36:/layout_fragment_gallery.xml.flat",
+        "source": "com.example.meme_maker.app-main-38:/layout/fragment_gallery.xml"
     },
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-debug-35:\\layout_fragment_create_meme.xml.flat",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-37:\\layout\\fragment_create_meme.xml"
+        "merged": "com.example.meme_maker.app-debug-36:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.meme_maker.app-main-38:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-debug-35:\\layout_fragment_main.xml.flat",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-37:\\layout\\fragment_main.xml"
+        "merged": "com.example.meme_maker.app-debug-36:/layout_fragment_create_meme.xml.flat",
+        "source": "com.example.meme_maker.app-main-38:/layout/fragment_create_meme.xml"
     },
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-debug-35:\\drawable_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-37:\\drawable\\ic_launcher_foreground.xml"
+        "merged": "com.example.meme_maker.app-debug-36:/layout_fragment_gallery_list.xml.flat",
+        "source": "com.example.meme_maker.app-main-38:/layout/fragment_gallery_list.xml"
     },
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-debug-35:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-37:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "com.example.meme_maker.app-debug-36:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.meme_maker.app-main-38:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-debug-35:\\layout_fragment_template.xml.flat",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-37:\\layout\\fragment_template.xml"
+        "merged": "com.example.meme_maker.app-debug-36:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.meme_maker.app-main-38:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-debug-35:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-37:\\layout\\activity_main.xml"
+        "merged": "com.example.meme_maker.app-debug-36:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.meme_maker.app-main-38:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-debug-35:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-37:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "com.example.meme_maker.app-debug-36:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.meme_maker.app-main-38:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-debug-35:\\layout_fragment_gallery.xml.flat",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-37:\\layout\\fragment_gallery.xml"
+        "merged": "com.example.meme_maker.app-debug-36:/layout_activity_main.xml.flat",
+        "source": "com.example.meme_maker.app-main-38:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-debug-35:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-37:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.meme_maker.app-debug-36:/font_roboto_bold.xml.flat",
+        "source": "com.example.meme_maker.app-main-38:/font/roboto_bold.xml"
     },
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-debug-35:\\menu_main_menu.xml.flat",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-37:\\menu\\main_menu.xml"
+        "merged": "com.example.meme_maker.app-debug-36:/layout_fragment_add_edit_meme.xml.flat",
+        "source": "com.example.meme_maker.app-main-38:/layout/fragment_add_edit_meme.xml"
     },
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-debug-35:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-37:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "com.example.meme_maker.app-debug-36:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.meme_maker.app-main-38:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-debug-35:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-37:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "com.example.meme_maker.app-debug-36:/layout_fragment_main.xml.flat",
+        "source": "com.example.meme_maker.app-main-38:/layout/fragment_main.xml"
     },
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-debug-35:\\layout_fragment_add_edit_meme.xml.flat",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-37:\\layout\\fragment_add_edit_meme.xml"
+        "merged": "com.example.meme_maker.app-debug-36:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.meme_maker.app-main-38:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-debug-35:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-37:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "com.example.meme_maker.app-debug-36:/drawable_memetemplate_1.jpg.flat",
+        "source": "com.example.meme_maker.app-main-38:/drawable/memetemplate_1.jpg"
     },
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-debug-35:\\layout_fragment_gallery_list.xml.flat",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-37:\\layout\\fragment_gallery_list.xml"
+        "merged": "com.example.meme_maker.app-debug-36:/drawable_gallery.png.flat",
+        "source": "com.example.meme_maker.app-main-38:/drawable/gallery.png"
     },
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-debug-35:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-37:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.meme_maker.app-debug-36:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.meme_maker.app-main-38:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-debug-35:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-37:\\xml\\data_extraction_rules.xml"
+        "merged": "com.example.meme_maker.app-debug-36:/layout_fragment_create_your_meme.xml.flat",
+        "source": "com.example.meme_maker.app-main-38:/layout/fragment_create_your_meme.xml"
     },
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-debug-35:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-37:\\xml\\backup_rules.xml"
+        "merged": "com.example.meme_maker.app-debug-36:/xml_backup_rules.xml.flat",
+        "source": "com.example.meme_maker.app-main-38:/xml/backup_rules.xml"
     },
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-debug-35:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-37:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "com.example.meme_maker.app-debug-36:/drawable_folder.png.flat",
+        "source": "com.example.meme_maker.app-main-38:/drawable/folder.png"
     },
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-debug-35:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-37:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "com.example.meme_maker.app-debug-36:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.meme_maker.app-main-38:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.meme_maker.app-debug-36:/menu_main_menu.xml.flat",
+        "source": "com.example.meme_maker.app-main-38:/menu/main_menu.xml"
+    },
+    {
+        "merged": "com.example.meme_maker.app-debug-36:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.meme_maker.app-main-38:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.meme_maker.app-debug-36:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.meme_maker.app-main-38:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.meme_maker.app-debug-36:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.meme_maker.app-main-38:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.meme_maker.app-debug-36:/drawable_camera.png.flat",
+        "source": "com.example.meme_maker.app-main-38:/drawable/camera.png"
+    },
+    {
+        "merged": "com.example.meme_maker.app-debug-36:/drawable_templte.png.flat",
+        "source": "com.example.meme_maker.app-main-38:/drawable/templte.png"
+    },
+    {
+        "merged": "com.example.meme_maker.app-debug-36:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.meme_maker.app-main-38:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.meme_maker.app-debug-36:/layout_fragment_template.xml.flat",
+        "source": "com.example.meme_maker.app-main-38:/layout/fragment_template.xml"
     }
 ]

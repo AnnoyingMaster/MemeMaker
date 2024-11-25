@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.meme_maker.app-mergeDebugResources-33:/values-large-v4/values-large-v4.xml",
+            "outputFile": "com.example.meme_maker.app-mergeDebugResources-34:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\molna\\.gradle\\caches\\8.9\\transforms\\e9c2b26b282de50702696a2e3e1d21ac\\transformed\\appcompat-1.6.1\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\gamep\\.gradle\\caches\\8.9\\transforms\\e9c2b26b282de50702696a2e3e1d21ac\\transformed\\appcompat-1.6.1\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\molna\\.gradle\\caches\\8.9\\transforms\\20549b5acfdd314970820bae6caa041f\\transformed\\material-1.10.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\gamep\\.gradle\\caches\\8.9\\transforms\\20549b5acfdd314970820bae6caa041f\\transformed\\material-1.10.0\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
