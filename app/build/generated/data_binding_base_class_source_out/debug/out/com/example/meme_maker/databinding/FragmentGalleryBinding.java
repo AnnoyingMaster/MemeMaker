@@ -4,6 +4,7 @@ package com.example.meme_maker.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -21,14 +22,19 @@ public final class FragmentGalleryBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final Button buttonLoadPicture;
+
+  @NonNull
   public final ImageView memeImageView;
 
   @NonNull
   public final TextView memeTextView;
 
   private FragmentGalleryBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageView memeImageView, @NonNull TextView memeTextView) {
+      @NonNull Button buttonLoadPicture, @NonNull ImageView memeImageView,
+      @NonNull TextView memeTextView) {
     this.rootView = rootView;
+    this.buttonLoadPicture = buttonLoadPicture;
     this.memeImageView = memeImageView;
     this.memeTextView = memeTextView;
   }
@@ -60,6 +66,12 @@ public final class FragmentGalleryBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.buttonLoadPicture;
+      Button buttonLoadPicture = ViewBindings.findChildViewById(rootView, id);
+      if (buttonLoadPicture == null) {
+        break missingId;
+      }
+
       id = R.id.memeImageView;
       ImageView memeImageView = ViewBindings.findChildViewById(rootView, id);
       if (memeImageView == null) {
@@ -72,7 +84,8 @@ public final class FragmentGalleryBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentGalleryBinding((ConstraintLayout) rootView, memeImageView, memeTextView);
+      return new FragmentGalleryBinding((ConstraintLayout) rootView, buttonLoadPicture,
+          memeImageView, memeTextView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
