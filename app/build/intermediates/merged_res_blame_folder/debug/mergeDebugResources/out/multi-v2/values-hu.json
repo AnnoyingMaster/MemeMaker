@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.meme_maker.app-mergeDebugResources-33:/values-hu/values-hu.xml",
+            "outputFile": "com.example.meme_maker.app-mergeDebugResources-34:/values-hu/values-hu.xml",
             "map": [
                 {
                     "source": "C:\\Users\\molna\\.gradle\\caches\\8.9\\transforms\\e9c2b26b282de50702696a2e3e1d21ac\\transformed\\appcompat-1.6.1\\res\\values-hu\\values-hu.xml",

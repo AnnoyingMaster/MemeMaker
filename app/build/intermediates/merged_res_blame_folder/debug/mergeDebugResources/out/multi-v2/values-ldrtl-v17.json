@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.meme_maker.app-mergeDebugResources-33:/values-ldrtl-v17/values-ldrtl-v17.xml",
+            "outputFile": "com.example.meme_maker.app-mergeDebugResources-34:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
                     "source": "C:\\Users\\molna\\.gradle\\caches\\8.9\\transforms\\20549b5acfdd314970820bae6caa041f\\transformed\\material-1.10.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",

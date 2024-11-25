@@ -4,7 +4,8 @@ package com.example.meme_maker.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -20,11 +21,34 @@ public final class FragmentCreateMemeBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button btnBrowse;
+  public final ImageButton btnBrowse;
 
-  private FragmentCreateMemeBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnBrowse) {
+  @NonNull
+  public final ImageButton btnCamera;
+
+  @NonNull
+  public final ImageButton btnTemplate;
+
+  @NonNull
+  public final TextView txtViewBrowse;
+
+  @NonNull
+  public final TextView txtViewGallery;
+
+  @NonNull
+  public final TextView txtViewTemplate;
+
+  private FragmentCreateMemeBinding(@NonNull ConstraintLayout rootView,
+      @NonNull ImageButton btnBrowse, @NonNull ImageButton btnCamera,
+      @NonNull ImageButton btnTemplate, @NonNull TextView txtViewBrowse,
+      @NonNull TextView txtViewGallery, @NonNull TextView txtViewTemplate) {
     this.rootView = rootView;
     this.btnBrowse = btnBrowse;
+    this.btnCamera = btnCamera;
+    this.btnTemplate = btnTemplate;
+    this.txtViewBrowse = txtViewBrowse;
+    this.txtViewGallery = txtViewGallery;
+    this.txtViewTemplate = txtViewTemplate;
   }
 
   @Override
@@ -55,12 +79,43 @@ public final class FragmentCreateMemeBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btnBrowse;
-      Button btnBrowse = ViewBindings.findChildViewById(rootView, id);
+      ImageButton btnBrowse = ViewBindings.findChildViewById(rootView, id);
       if (btnBrowse == null) {
         break missingId;
       }
 
-      return new FragmentCreateMemeBinding((ConstraintLayout) rootView, btnBrowse);
+      id = R.id.btnCamera;
+      ImageButton btnCamera = ViewBindings.findChildViewById(rootView, id);
+      if (btnCamera == null) {
+        break missingId;
+      }
+
+      id = R.id.btnTemplate;
+      ImageButton btnTemplate = ViewBindings.findChildViewById(rootView, id);
+      if (btnTemplate == null) {
+        break missingId;
+      }
+
+      id = R.id.txtViewBrowse;
+      TextView txtViewBrowse = ViewBindings.findChildViewById(rootView, id);
+      if (txtViewBrowse == null) {
+        break missingId;
+      }
+
+      id = R.id.txtViewGallery;
+      TextView txtViewGallery = ViewBindings.findChildViewById(rootView, id);
+      if (txtViewGallery == null) {
+        break missingId;
+      }
+
+      id = R.id.txtViewTemplate;
+      TextView txtViewTemplate = ViewBindings.findChildViewById(rootView, id);
+      if (txtViewTemplate == null) {
+        break missingId;
+      }
+
+      return new FragmentCreateMemeBinding((ConstraintLayout) rootView, btnBrowse, btnCamera,
+          btnTemplate, txtViewBrowse, txtViewGallery, txtViewTemplate);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
