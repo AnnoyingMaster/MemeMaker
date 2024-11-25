@@ -53,9 +53,9 @@ public class GalleryFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_gallery_list, container, false);
         memeList = new ArrayList<>();
 
-        memeList.add(new Item("kép1", "kép1szövege" ));
-        memeList.add(new Item("kép2", "kép2szövege" ));
-        memeList.add(new Item("kép3", "kép3szövege" ));
+        memeList.add(new Item( R.drawable.memetemplate_1, "Dog and Dawg" ));
+        memeList.add(new Item( R.drawable.memetemplate_1, "Dog and Dawg" ));
+        memeList.add(new Item( R.drawable.memetemplate_1, "Dog and Dawg" ));
 
         galleryRecyclerView = view.findViewById(R.id.templatesRecyclerView);
         adapter = new GalleryItemRecyclerViewAdapter(memeList);

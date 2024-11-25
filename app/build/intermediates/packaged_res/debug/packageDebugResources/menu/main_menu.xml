@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/baseline_home_white_18dp"
+        android:title="Főoldal"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/btn_creatememe"
+        android:title="Create Meme"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/btn_memetemplates"
+        android:title="Meme Templates"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/btn_gallery"
+        android:title="Gallery"
+        app:showAsAction="never"/>
+
+</menu>

@@ -1,0 +1,36 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+dimen text_margin
+drawable baseline_home_white_18dp
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id action_home
+id btnBrowse
+id btn_creatememe
+id btn_gallery
+id btn_memetemplates
+id fragmentContainerView
+id frameLayout
+id galleryRecyclerView
+id main
+id memeImageView
+id memeTextView
+id toolbar
+layout activity_main
+layout fragment_add_edit_meme
+layout fragment_create_meme
+layout fragment_gallery
+layout fragment_gallery_list
+layout fragment_main
+layout fragment_template
+menu main_menu
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string hello_blank_fragment
+style Base.Theme.Meme_maker
+style Theme.Meme_maker
+xml backup_rules
+xml data_extraction_rules
