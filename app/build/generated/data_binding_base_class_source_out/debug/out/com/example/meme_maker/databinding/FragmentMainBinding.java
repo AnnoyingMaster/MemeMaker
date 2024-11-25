@@ -4,25 +4,56 @@ package com.example.meme_maker.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
+import android.widget.ImageButton;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.meme_maker.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class FragmentMainBinding implements ViewBinding {
   @NonNull
-  private final FrameLayout rootView;
+  private final ConstraintLayout rootView;
 
-  private FragmentMainBinding(@NonNull FrameLayout rootView) {
+  @NonNull
+  public final ImageButton btnCreate;
+
+  @NonNull
+  public final ImageButton btnGallery;
+
+  @NonNull
+  public final ImageButton btnTemplate;
+
+  @NonNull
+  public final TextView txtViewCreate;
+
+  @NonNull
+  public final TextView txtViewGallery;
+
+  @NonNull
+  public final TextView txtViewTemplate;
+
+  private FragmentMainBinding(@NonNull ConstraintLayout rootView, @NonNull ImageButton btnCreate,
+      @NonNull ImageButton btnGallery, @NonNull ImageButton btnTemplate,
+      @NonNull TextView txtViewCreate, @NonNull TextView txtViewGallery,
+      @NonNull TextView txtViewTemplate) {
     this.rootView = rootView;
+    this.btnCreate = btnCreate;
+    this.btnGallery = btnGallery;
+    this.btnTemplate = btnTemplate;
+    this.txtViewCreate = txtViewCreate;
+    this.txtViewGallery = txtViewGallery;
+    this.txtViewTemplate = txtViewTemplate;
   }
 
   @Override
   @NonNull
-  public FrameLayout getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -43,10 +74,50 @@ public final class FragmentMainBinding implements ViewBinding {
 
   @NonNull
   public static FragmentMainBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.btnCreate;
+      ImageButton btnCreate = ViewBindings.findChildViewById(rootView, id);
+      if (btnCreate == null) {
+        break missingId;
+      }
 
-    return new FragmentMainBinding((FrameLayout) rootView);
+      id = R.id.btnGallery;
+      ImageButton btnGallery = ViewBindings.findChildViewById(rootView, id);
+      if (btnGallery == null) {
+        break missingId;
+      }
+
+      id = R.id.btnTemplate;
+      ImageButton btnTemplate = ViewBindings.findChildViewById(rootView, id);
+      if (btnTemplate == null) {
+        break missingId;
+      }
+
+      id = R.id.txtViewCreate;
+      TextView txtViewCreate = ViewBindings.findChildViewById(rootView, id);
+      if (txtViewCreate == null) {
+        break missingId;
+      }
+
+      id = R.id.txtViewGallery;
+      TextView txtViewGallery = ViewBindings.findChildViewById(rootView, id);
+      if (txtViewGallery == null) {
+        break missingId;
+      }
+
+      id = R.id.txtViewTemplate;
+      TextView txtViewTemplate = ViewBindings.findChildViewById(rootView, id);
+      if (txtViewTemplate == null) {
+        break missingId;
+      }
+
+      return new FragmentMainBinding((ConstraintLayout) rootView, btnCreate, btnGallery,
+          btnTemplate, txtViewCreate, txtViewGallery, txtViewTemplate);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

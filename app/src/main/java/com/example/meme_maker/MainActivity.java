@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         loadFragment(new Main(), "Főoldal", false);
-        setTitle("Főoldal");
+        changeTitle("main");
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.LENGTH_SHORT).show();
     }
 
-    private void loadFragmentAndAddToBackStack(Fragment fragment, String tag) {
+    public void loadFragmentAndAddToBackStack(Fragment fragment, String tag) {
         loadFragment(fragment, tag, true);
     }
 
@@ -70,18 +70,36 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_home:
                 loadFragmentAndAddToBackStack(new Main(), "Főoldal");
-                setTitle("Főoldal");
+                changeTitle("main");
                 return true;
             case R.id.btn_creatememe:
                 loadFragmentAndAddToBackStack(new CreateMemeFragment(), "Create Meme");
-                setTitle("Create your Meme");
+                changeTitle("create");
                 return true;
             case R.id.btn_memetemplates:
                 loadFragmentAndAddToBackStack(new TemplateFragment(), "Templates");
-                setTitle("Templates");
+                changeTitle("template");
                 return true;
             case R.id.btn_gallery:
                 loadFragmentAndAddToBackStack(new GalleryFragment(), "Gallery");
+                changeTitle("gallery");
+                return true;
+        }
+        return true;
+    }
+
+    public boolean changeTitle(String title){
+        switch (title) {
+            case "main":
+                setTitle("Főoldal");
+                return true;
+            case "create":
+                setTitle("Create Meme");
+                return true;
+            case "template":
+                setTitle("Templates");
+                return true;
+            case "gallery":
                 setTitle("Gallery");
                 return true;
         }

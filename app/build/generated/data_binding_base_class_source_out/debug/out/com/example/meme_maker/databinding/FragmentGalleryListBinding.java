@@ -17,12 +17,12 @@ public final class FragmentGalleryListBinding implements ViewBinding {
   private final RecyclerView rootView;
 
   @NonNull
-  public final RecyclerView galleryRecyclerView;
+  public final RecyclerView templatesRecyclerView;
 
   private FragmentGalleryListBinding(@NonNull RecyclerView rootView,
-      @NonNull RecyclerView galleryRecyclerView) {
+      @NonNull RecyclerView templatesRecyclerView) {
     this.rootView = rootView;
-    this.galleryRecyclerView = galleryRecyclerView;
+    this.templatesRecyclerView = templatesRecyclerView;
   }
 
   @Override
@@ -52,8 +52,8 @@ public final class FragmentGalleryListBinding implements ViewBinding {
       throw new NullPointerException("rootView");
     }
 
-    RecyclerView galleryRecyclerView = (RecyclerView) rootView;
+    RecyclerView templatesRecyclerView = (RecyclerView) rootView;
 
-    return new FragmentGalleryListBinding((RecyclerView) rootView, galleryRecyclerView);
+    return new FragmentGalleryListBinding((RecyclerView) rootView, templatesRecyclerView);
   }
 }
