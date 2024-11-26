@@ -1,34 +1,30 @@
 [
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-mergeDebugResources-35:\\layout\\fragment_add_edit_meme.xml",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-38:\\layout\\fragment_add_edit_meme.xml"
+        "merged": "com.example.meme_maker.app-mergeDebugResources-35:/layout/activity_main.xml",
+        "source": "com.example.meme_maker.app-main-38:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-mergeDebugResources-35:\\layout\\fragment_gallery_list.xml",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-38:\\layout\\fragment_gallery_list.xml"
+        "merged": "com.example.meme_maker.app-mergeDebugResources-35:/layout/fragment_add_edit_meme.xml",
+        "source": "com.example.meme_maker.app-main-38:/layout/fragment_add_edit_meme.xml"
     },
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-mergeDebugResources-35:\\layout\\fragment_main.xml",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-38:\\layout\\fragment_main.xml"
+        "merged": "com.example.meme_maker.app-mergeDebugResources-35:/layout/fragment_create_meme.xml",
+        "source": "com.example.meme_maker.app-main-38:/layout/fragment_create_meme.xml"
     },
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-mergeDebugResources-35:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-38:\\layout\\activity_main.xml"
+        "merged": "com.example.meme_maker.app-mergeDebugResources-35:/layout/fragment_gallery.xml",
+        "source": "com.example.meme_maker.app-main-38:/layout/fragment_gallery.xml"
     },
     {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-mergeDebugResources-35:\\layout\\fragment_gallery.xml",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-38:\\layout\\fragment_gallery.xml"
+        "merged": "com.example.meme_maker.app-mergeDebugResources-35:/layout/fragment_main.xml",
+        "source": "com.example.meme_maker.app-main-38:/layout/fragment_main.xml"
+    },
+    {
+        "merged": "com.example.meme_maker.app-mergeDebugResources-35:/layout/fragment_gallery_list.xml",
+        "source": "com.example.meme_maker.app-main-38:/layout/fragment_gallery_list.xml"
     },
     {
         "merged": "com.example.meme_maker.app-mergeDebugResources-35:/layout/fragment_template.xml",
         "source": "com.example.meme_maker.app-main-38:/layout/fragment_template.xml"
-    },
-    {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-mergeDebugResources-35:\\layout\\fragment_template.xml",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-38:\\layout\\fragment_template.xml"
-    },
-    {
-        "merged": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-mergeDebugResources-35:\\layout\\fragment_create_meme.xml",
-        "source": "C:\\Users\\molna\\.gradle\\daemon\\8.9\\com.example.meme_maker.app-main-38:\\layout\\fragment_create_meme.xml"
     }
 ]
