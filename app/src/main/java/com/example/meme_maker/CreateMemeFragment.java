@@ -6,6 +6,14 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContract;
+import androidx.activity.result.contract.ActivityResultContracts;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.provider.MediaStore;
@@ -15,6 +23,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 
 public class CreateMemeFragment extends Fragment {
@@ -24,9 +33,46 @@ public class CreateMemeFragment extends Fragment {
         // Required empty public constructor
     }
 
+    ImageButton buttonBrowse;
+    ImageView testImgView;
+
+    ActivityResultLauncher<Intent> resultLauncher;
+
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        buttonBrowse = view.findViewById(R.id.btnBrowse);
+        testImgView = view.findViewById(R.id.testImgView);
+
+        registerResult();
+
+        buttonBrowse.setOnClickListener(v -> pickImage());
+    }
+
+
+    private void pickImage(){
+        Intent intent = new Intent(MediaStore.ACTION_PICK_IMAGES);
+        resultLauncher.launch(intent);
+    }
+
+
+    private void registerResult(){
+        resultLauncher = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                new ActivityResultCallback<ActivityResult>() {
+                    @Override
+                    public void onActivityResult(ActivityResult result){
+                        try{
+                            Uri imageUri = result.getData().getData();
+                            testImgView.setImageURI(imageUri);
+                        } catch (Exception e){
+                            Toast.makeText(getContext(), "Nincs kép kiválasztva", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
+
+        );
     }
 
     private static int RESULT_LOAD_IMAGE = 1;
@@ -36,18 +82,6 @@ public class CreateMemeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_create_meme, container, false);
-
-        ImageButton buttonBrowse = view.findViewById(R.id.btnBrowse);
-        buttonBrowse.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View arg0){
-                Intent i = new Intent(
-                        Intent.ACTION_PICK,
-                        android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-
-                startActivityForResult(i, RESULT_LOAD_IMAGE);
-            }
-        });
 
         return view;
     }
