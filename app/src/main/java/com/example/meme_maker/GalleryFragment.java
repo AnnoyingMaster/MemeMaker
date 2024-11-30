@@ -53,9 +53,28 @@ public class GalleryFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_gallery_list, container, false);
         memeList = new ArrayList<>();
 
-        memeList.add(new Item( R.drawable.memetemplate_1, "Dog and Dawg" ));
-        memeList.add(new Item( R.drawable.memetemplate_1, "Dog and Dawg" ));
-        memeList.add(new Item( R.drawable.memetemplate_1, "Dog and Dawg" ));
+        memeList.add(new Item( R.drawable.memetemplate_3, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_5, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_6, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_7, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_8, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_9, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_11, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_12, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_13, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_14, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_15, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_16, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_17, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_18, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_19, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_20, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_21, "" ));
+
+
+
+
+
 
         galleryRecyclerView = view.findViewById(R.id.templatesRecyclerView);
         adapter = new GalleryItemRecyclerViewAdapter(memeList);
