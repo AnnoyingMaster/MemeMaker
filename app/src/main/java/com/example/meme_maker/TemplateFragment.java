@@ -96,7 +96,7 @@ public class TemplateFragment extends Fragment {
 
         getParentFragmentManager()
                 .beginTransaction()
-                .replace(R.id.fragmentContainer, editorFragment) // Editor fragmentbe cseréljük
+                .replace(R.id.fragmentContainerView, editorFragment) // Editor fragmentbe cseréljük
                 .addToBackStack(null)
                 .commit();
     }
