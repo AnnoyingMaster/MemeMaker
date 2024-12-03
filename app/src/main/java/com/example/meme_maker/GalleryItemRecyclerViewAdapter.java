@@ -1,64 +1,59 @@
 package com.example.meme_maker;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.bumptech.glide.Glide;
-import com.example.meme_maker.placeholder.PlaceholderContent.PlaceholderItem;
-import com.example.meme_maker.databinding.FragmentGalleryBinding;
 
-import java.util.ArrayList;
+import java.io.File;
 import java.util.List;
-
 
 public class GalleryItemRecyclerViewAdapter extends RecyclerView.Adapter<GalleryItemRecyclerViewAdapter.ViewHolder> {
 
-    private final List<Item> mValues;
+    private List<MemeItem> memeFiles;
 
-    public GalleryItemRecyclerViewAdapter(List<Item> items) {
-        mValues = items;
+    public GalleryItemRecyclerViewAdapter(List<MemeItem> files) {
+        this.memeFiles = files;
+    }
+
+    @NonNull
+    @Override
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_gallery, parent, false);
+        return new ViewHolder(view);
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.fragment_gallery, parent, false);
-        return new ViewHolder(itemView);
-    }
-
-    @Override
-    public void onBindViewHolder(final ViewHolder holder, int position) {
-        Item item = mValues.get(position);
-        holder.memeTextView.setText(item.getTitle());
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        MemeItem memeItem = memeFiles.get(position);
+        holder.memeTextView.setText(memeItem.getTitle());
         Glide.with(holder.itemView.getContext())
-                .load(item.getImage())
+                .load(new File(memeItem.getImagePath()))
                 .into(holder.memeImageView);
     }
 
-
-
     @Override
     public int getItemCount() {
-        return mValues.size();
+        return memeFiles.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        public final TextView memeTextView;
-        public final ImageView memeImageView;
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        TextView memeTextView;
+        ImageView memeImageView;
 
-        public ViewHolder(@NonNull View itemView) {
+        public ViewHolder(View itemView) {
             super(itemView);
             memeTextView = itemView.findViewById(R.id.memeTextView);
             memeImageView = itemView.findViewById(R.id.memeImageView);
-
         }
-
-
     }
 }

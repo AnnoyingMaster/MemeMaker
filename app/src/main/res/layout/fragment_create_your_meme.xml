@@ -58,8 +58,8 @@
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/applyTextButton"
         tools:layout_editor_absoluteX="185dp"
-        android:progress="16"
-        android:max="48"/>
+        android:progress="32"
+        android:max="96"/>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -80,7 +80,7 @@ public class MemeEditorFragment extends Fragment{
 
         // szöveg szinezése
         Paint paint = new Paint();
-        paint.setColor(Color.BLACK);
+        paint.setColor(Color.RED);
         paint.setTextSize(topTextEditText.getTextSize());
         paint.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD));
         paint.setAntiAlias(true);

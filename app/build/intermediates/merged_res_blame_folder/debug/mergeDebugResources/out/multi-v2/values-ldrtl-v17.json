@@ -4,7 +4,7 @@
             "outputFile": "com.example.meme_maker.app-mergeDebugResources-34:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\4-111-11\\.gradle\\caches\\8.9\\transforms\\20549b5acfdd314970820bae6caa041f\\transformed\\material-1.10.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
+                    "source": "C:\\Users\\gamep\\.gradle\\caches\\8.9\\transforms\\20549b5acfdd314970820bae6caa041f\\transformed\\material-1.10.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
