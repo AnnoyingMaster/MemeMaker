@@ -44,7 +44,6 @@ id btn_creatememe
 id btn_gallery
 id btn_memetemplates
 id fragmentContainerView
-id frameLayout
 id main
 id memeImageView
 id memeTextView
@@ -55,7 +54,6 @@ id txtViewCreate
 id txtViewGallery
 id txtViewTemplate
 layout activity_main
-layout fragment_add_edit_meme
 layout fragment_create_meme
 layout fragment_gallery
 layout fragment_gallery_list

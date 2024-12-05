@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.meme_maker.app-mergeDebugResources-34:/values-v24/values-v24.xml",
+            "outputFile": "com.example.meme_maker.app-mergeDebugResources-2:/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\molna\\.gradle\\caches\\8.9\\transforms\\e9c2b26b282de50702696a2e3e1d21ac\\transformed\\appcompat-1.6.1\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Annoying\\.gradle\\caches\\8.9\\transforms\\e9c2b26b282de50702696a2e3e1d21ac\\transformed\\appcompat-1.6.1\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\molna\\.gradle\\caches\\8.9\\transforms\\d242b973774b0e66a7c88385dd7e2015\\transformed\\media-1.0.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Annoying\\.gradle\\caches\\8.9\\transforms\\d242b973774b0e66a7c88385dd7e2015\\transformed\\media-1.0.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -31,7 +31,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\molna\\.gradle\\caches\\8.9\\transforms\\20549b5acfdd314970820bae6caa041f\\transformed\\material-1.10.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Annoying\\.gradle\\caches\\8.9\\transforms\\20549b5acfdd314970820bae6caa041f\\transformed\\material-1.10.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,9,12,15",
                         "startColumns": "4,4,4,4,4,4,4,4",
