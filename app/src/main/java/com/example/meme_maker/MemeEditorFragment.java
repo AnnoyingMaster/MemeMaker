@@ -78,27 +78,31 @@ public class MemeEditorFragment extends Fragment{
         // canvas készítése
         Canvas canvas = new Canvas(bitmap);
 
-        // szöveg szinezése
-        Paint paint = new Paint();
-        paint.setColor(Color.RED);
-        paint.setTextSize(topTextEditText.getTextSize());
-        paint.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD));
-        paint.setAntiAlias(true);
+// Szöveg színezése - feltöltés és kontúr szimulálása árnyékkal
+        Paint textPaint = new Paint();
+        textPaint.setColor(Color.WHITE); // Feltöltő szín
+        textPaint.setTextSize(topTextEditText.getTextSize());
+        textPaint.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD));
+        textPaint.setAntiAlias(true); // Simított rajzolás
+        textPaint.setStyle(Paint.Style.FILL); // Feltöltő stílus
 
-        // felső szöveg
+// Árnyék hozzáadása kontúrként
+        textPaint.setShadowLayer(15f, 0f, 0f, Color.BLACK); // Árnyék méret és szín (kontúrhatás)
+
+// Felső szöveg rajzolása
         canvas.drawText(
                 topTextEditText.getText().toString(),
                 bitmap.getWidth() * 0.1f,
                 bitmap.getHeight() * 0.1f,
-                paint
+                textPaint
         );
 
-        // alsó szöveg
+// Alsó szöveg rajzolása
         canvas.drawText(
                 bottomTextEditText.getText().toString(),
                 bitmap.getWidth() * 0.1f,
                 bitmap.getHeight() * 0.9f,
-                paint
+                textPaint
         );
 
         // Frissíti a kép nézetét az új bitmap-el
