@@ -44,14 +44,26 @@ public class CreateMemeFragment extends Fragment {
     Uri imageUri;
 
 
-
     private ActivityResultLauncher<Intent> cameraLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             result -> {
                 if (result.getResultCode() == Activity.RESULT_OK) {
+                    // A kamera által készített képet Bitmap formájában szerezhetjük be
                     Bundle extras = result.getData().getExtras();
                     Bitmap imageBitmap = (Bitmap) extras.get("data");
-                    testImgView.setImageBitmap(imageBitmap);
+
+                    // Átadjuk a képet a Fragment-nek
+                    MemeEditorFragment fragment = new MemeEditorFragment();
+                    Bundle bundle = new Bundle();
+                    bundle.putParcelable("imageBitmap", imageBitmap); // Kép átadása
+                    fragment.setArguments(bundle);
+
+                    // Fragment tranzakció indítása
+                    requireActivity().getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.fragmentContainerView, fragment)
+                            .addToBackStack(null)
+                            .commit();
                 }
             }
     );
@@ -59,9 +71,23 @@ public class CreateMemeFragment extends Fragment {
     private ActivityResultLauncher<Intent> galleryLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             result -> {
-                if (result.getResultCode() == Activity.RESULT_OK) {
+                if (result.getResultCode() == Activity.RESULT_OK && result.getData() != null) {
                     Uri imageUri = result.getData().getData();
-                    testImgView.setImageURI(imageUri);
+
+                    if (imageUri != null) {
+                        // Új Fragment példányosítása és a kép URI átadása
+                        MemeEditorFragment fragment = new MemeEditorFragment();
+                        Bundle bundle = new Bundle();
+                        bundle.putString("imageUri", imageUri.toString()); // URI átadása
+                        fragment.setArguments(bundle);
+
+                        // Fragment tranzakció végrehajtása
+                        requireActivity().getSupportFragmentManager()
+                                .beginTransaction()
+                                .replace(R.id.fragmentContainerView, fragment) // fragmentContainer a hely, ahova a fragment kerül
+                                .addToBackStack(null) // Visszalépési lehetőség
+                                .commit();
+                    }
                 }
             }
     );
@@ -71,7 +97,6 @@ public class CreateMemeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         buttonBrowse = view.findViewById(R.id.btnBrowse);
-        testImgView = view.findViewById(R.id.testImgView);
         buttonCamera = view.findViewById(R.id.btnCamera);
 
         buttonCamera.setOnClickListener(v -> {

@@ -1,11 +1,11 @@
 [
     {
-        "merged": "com.example.meme_maker.app-mergeDebugResources-3:/layout/fragment_create_meme.xml",
-        "source": "com.example.meme_maker.app-main-6:/layout/fragment_create_meme.xml"
+        "merged": "com.example.meme_maker.app-mergeDebugResources-3:/layout/fragment_create_your_meme.xml",
+        "source": "com.example.meme_maker.app-main-6:/layout/fragment_create_your_meme.xml"
     },
     {
-        "merged": "com.example.meme_maker.app-mergeDebugResources-3:/layout/fragment_add_edit_meme.xml",
-        "source": "com.example.meme_maker.app-main-6:/layout/fragment_add_edit_meme.xml"
+        "merged": "com.example.meme_maker.app-mergeDebugResources-3:/layout/fragment_create_meme.xml",
+        "source": "com.example.meme_maker.app-main-6:/layout/fragment_create_meme.xml"
     },
     {
         "merged": "com.example.meme_maker.app-mergeDebugResources-3:/layout/fragment_gallery_list.xml",

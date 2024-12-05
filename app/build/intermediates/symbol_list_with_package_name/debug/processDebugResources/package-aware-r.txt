@@ -3168,6 +3168,7 @@ id animateToEnd
 id animateToStart
 id antiClockwise
 id anticipate
+id applyTextButton
 id arc
 id asConfigured
 id async
@@ -3182,6 +3183,7 @@ id beginning
 id bestChoice
 id blocking
 id bottom
+id bottomTextEditText
 id bounce
 id bounceBoth
 id bounceEnd
@@ -3293,6 +3295,7 @@ id fitXY
 id fixed
 id flip
 id floating
+id fontSizeSeekBar
 id forever
 id fragmentContainerView
 id fragment_container_view_tag
@@ -3369,6 +3372,7 @@ id material_timepicker_view
 id material_value_index
 id matrix
 id media_actions
+id memeImage
 id memeImageView
 id memeTextView
 id message
@@ -3551,6 +3555,7 @@ id tag_window_insets_animation_callback
 id templatesRecyclerView
 id text
 id text2
+id textEditorLayout
 id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
@@ -3573,6 +3578,7 @@ id toggle
 id toolbar
 id top
 id topPanel
+id topTextEditText
 id touch_outside
 id transitionToEnd
 id transitionToStart
@@ -3741,6 +3747,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_create_meme
+layout fragment_create_your_meme
 layout fragment_gallery
 layout fragment_gallery_list
 layout fragment_main

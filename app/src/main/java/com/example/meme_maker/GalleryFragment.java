@@ -77,24 +77,35 @@ public class GalleryFragment extends Fragment {
 
 
         galleryRecyclerView = view.findViewById(R.id.templatesRecyclerView);
-        adapter = new GalleryItemRecyclerViewAdapter(memeList);
+
+        // Kattintás kezelése manuálisan (lambda helyett)
+        GalleryItemRecyclerViewAdapter.OnGalleryClickListener listener = new GalleryItemRecyclerViewAdapter.OnGalleryClickListener() {
+            @Override
+            public void onGalleryClick(int imageResId) {
+                // Kiválasztott sablon megnyitása az editorban
+                openEditorFragment(imageResId);
+            }
+        };
+
+        adapter = new GalleryItemRecyclerViewAdapter(memeList, listener);
         RecyclerView.LayoutManager layoutManager =
                 new LinearLayoutManager(getContext());
         galleryRecyclerView.setLayoutManager(layoutManager);
         galleryRecyclerView.setAdapter(adapter);
 
 
-        // Set the adapter
-        /*if (view instanceof RecyclerView) {
-            Context context = view.getContext();
-            RecyclerView recyclerView = (RecyclerView) view;
-            if (mColumnCount <= 1) {
-                recyclerView.setLayoutManager(new LinearLayoutManager(context));
-            } else {
-                recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
-            }
-            recyclerView.setAdapter(new GalleryItemRecyclerViewAdapter(PlaceholderContent.ITEMS));
-        }*/
         return view;
+    }
+    private void openEditorFragment(int imageResId) {
+        MemeEditorFragment editorFragment = new MemeEditorFragment();
+        Bundle args = new Bundle();
+        args.putInt("TEMPLATE_IMAGE", imageResId); // A kiválasztott sablonkép ID-t átadjuk
+        editorFragment.setArguments(args);
+
+        getParentFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragmentContainerView, editorFragment) // Editor fragmentbe cseréljük
+                .addToBackStack(null)
+                .commit();
     }
 }
