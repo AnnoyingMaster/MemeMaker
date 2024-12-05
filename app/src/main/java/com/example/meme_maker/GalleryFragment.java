@@ -53,29 +53,59 @@ public class GalleryFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_gallery_list, container, false);
         memeList = new ArrayList<>();
 
-        memeList.add(new Item( R.drawable.memetemplate_1, "Dog and Dawg" ));
-        memeList.add(new Item( R.drawable.memetemplate_1, "Dog and Dawg" ));
-        memeList.add(new Item( R.drawable.memetemplate_1, "Dog and Dawg" ));
+        memeList.add(new Item( R.drawable.memetemplate_3, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_5, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_6, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_7, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_8, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_9, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_11, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_12, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_13, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_14, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_15, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_16, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_17, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_18, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_19, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_20, "" ));
+        memeList.add(new Item( R.drawable.memetemplate_21, "" ));
+
+
+
+
+
 
         galleryRecyclerView = view.findViewById(R.id.templatesRecyclerView);
-        adapter = new GalleryItemRecyclerViewAdapter(memeList);
+
+        // Kattintás kezelése manuálisan (lambda helyett)
+        GalleryItemRecyclerViewAdapter.OnGalleryClickListener listener = new GalleryItemRecyclerViewAdapter.OnGalleryClickListener() {
+            @Override
+            public void onGalleryClick(int imageResId) {
+                // Kiválasztott sablon megnyitása az editorban
+                openEditorFragment(imageResId);
+            }
+        };
+
+        adapter = new GalleryItemRecyclerViewAdapter(memeList, listener);
         RecyclerView.LayoutManager layoutManager =
                 new LinearLayoutManager(getContext());
         galleryRecyclerView.setLayoutManager(layoutManager);
         galleryRecyclerView.setAdapter(adapter);
 
 
-        // Set the adapter
-        /*if (view instanceof RecyclerView) {
-            Context context = view.getContext();
-            RecyclerView recyclerView = (RecyclerView) view;
-            if (mColumnCount <= 1) {
-                recyclerView.setLayoutManager(new LinearLayoutManager(context));
-            } else {
-                recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
-            }
-            recyclerView.setAdapter(new GalleryItemRecyclerViewAdapter(PlaceholderContent.ITEMS));
-        }*/
         return view;
+    }
+    private void openEditorFragment(int imageResId) {
+        MemeEditorFragment editorFragment = new MemeEditorFragment();
+        Bundle args = new Bundle();
+        args.putInt("TEMPLATE_IMAGE", imageResId); // A kiválasztott sablonkép ID-t átadjuk
+        editorFragment.setArguments(args);
+
+        getParentFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragmentContainerView, editorFragment) // Editor fragmentbe cseréljük
+                .addToBackStack(null)
+                .commit();
     }
 }

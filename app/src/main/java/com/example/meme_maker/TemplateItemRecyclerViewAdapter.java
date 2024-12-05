@@ -20,9 +20,11 @@ import java.util.List;
 public class TemplateItemRecyclerViewAdapter extends RecyclerView.Adapter<TemplateItemRecyclerViewAdapter.ViewHolder> {
 
     private final List<Item> mValues;
+    private final OnTemplateClickListener onTemplateClickListener;
 
-    public TemplateItemRecyclerViewAdapter(List<Item> items) {
+    public TemplateItemRecyclerViewAdapter(List<Item> items, OnTemplateClickListener listener) {
         mValues = items;
+        onTemplateClickListener = listener;
     }
 
     @Override
@@ -36,19 +38,23 @@ public class TemplateItemRecyclerViewAdapter extends RecyclerView.Adapter<Templa
     public void onBindViewHolder(final ViewHolder holder, int position) {
         Item item = mValues.get(position);
         holder.memeTextView.setText(item.getTitle());
-        Glide.with(holder.itemView.getContext())
-                .load(item.getImage())
-                .into(holder.memeImageView);
+        holder.memeImageView.setImageResource(item.getImage());
+
+        // Kattintás kezelése
+        holder.itemView.setOnClickListener(v -> {
+            if (onTemplateClickListener != null) {
+                // Kiválasztott kép továbbítása
+                onTemplateClickListener.onTemplateClick(item.getImage());
+            }
+        });
     }
-
-
 
     @Override
     public int getItemCount() {
         return mValues.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         public final TextView memeTextView;
         public final ImageView memeImageView;
 
@@ -56,9 +62,11 @@ public class TemplateItemRecyclerViewAdapter extends RecyclerView.Adapter<Templa
             super(itemView);
             memeTextView = itemView.findViewById(R.id.memeTextView);
             memeImageView = itemView.findViewById(R.id.memeImageView);
-
         }
+    }
 
-
+    public interface OnTemplateClickListener {
+        void onTemplateClick(int imageResId);
     }
 }
+

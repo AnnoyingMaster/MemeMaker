@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.meme_maker.test.app-mergeDebugAndroidTestResources-7:/values/values.xml",
+            "outputFile": "com.example.meme_maker.test.app-mergeDebugAndroidTestResources-1:/values/values.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\molna\\.gradle\\caches\\8.9\\transforms\\d150652bc44b13bd17163afc99fcf0f4\\transformed\\core-1.5.0\\res\\values\\values.xml",
+                    "source": "C:\\Users\\Annoying\\.gradle\\caches\\8.9\\transforms\\d150652bc44b13bd17163afc99fcf0f4\\transformed\\core-1.5.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "4,11",
                         "startColumns": "0,0",

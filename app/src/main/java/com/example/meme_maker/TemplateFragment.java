@@ -44,24 +44,60 @@ public class TemplateFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_gallery_list, container, false);
         memeList = new ArrayList<>();
 
-        memeList.add(new Item( R.drawable.memetemplate_1, "Dog and Dawg" ));
-        memeList.add(new Item( R.drawable.memetemplate_1, "Dog and Dawg" ));
-        memeList.add(new Item( R.drawable.memetemplate_1, "Dog and Dawg" ));
+        memeList.add(new Item(R.drawable.memetemplate_3, "Allstars"));
+        memeList.add(new Item(R.drawable.memetemplate_5, "Face"));
+        memeList.add(new Item(R.drawable.memetemplate_6, "Gundog"));
+        memeList.add(new Item(R.drawable.memetemplate_7, "Finger"));
+        memeList.add(new Item(R.drawable.memetemplate_8, "Pingui"));
+        memeList.add(new Item(R.drawable.memetemplate_9, "Bunny"));
+        memeList.add(new Item(R.drawable.memetemplate_11, "Fist"));
+        memeList.add(new Item(R.drawable.memetemplate_12, "Gunda"));
+        memeList.add(new Item(R.drawable.memetemplate_13, "Sponge Pant"));
+        memeList.add(new Item(R.drawable.memetemplate_14, "Angry Bob"));
+        memeList.add(new Item(R.drawable.memetemplate_15, "Giga Bob"));
+        memeList.add(new Item(R.drawable.memetemplate_16, "Angrystein"));
+        memeList.add(new Item(R.drawable.memetemplate_17, "Shake"));
+        memeList.add(new Item(R.drawable.memetemplate_18, "Reload Cat"));
+        memeList.add(new Item(R.drawable.memetemplate_19, "Dog"));
+        memeList.add(new Item(R.drawable.memetemplate_20, "Dawg"));
+        memeList.add(new Item(R.drawable.memetemplate_21, "Kife Dog"));
+
 
         templateRecyclerView = view.findViewById(R.id.templatesRecyclerView);
-        adapter = new TemplateItemRecyclerViewAdapter(memeList);
-        RecyclerView.LayoutManager layoutManager =
-                new LinearLayoutManager(getContext());
+
+        // Kattintás kezelése manuálisan (lambda helyett)
+        TemplateItemRecyclerViewAdapter.OnTemplateClickListener listener = new TemplateItemRecyclerViewAdapter.OnTemplateClickListener() {
+            @Override
+            public void onTemplateClick(int imageResId) {
+                // Kiválasztott sablon megnyitása az editorban
+                openEditorFragment(imageResId);
+            }
+        };
+
+        // Adapter inicializálása
+        adapter = new TemplateItemRecyclerViewAdapter(memeList, listener);
+
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
         templateRecyclerView.setLayoutManager(layoutManager);
         templateRecyclerView.setAdapter(adapter);
 
-
-      
         return view;
+    }
+
+    private void openEditorFragment(int imageResId) {
+        MemeEditorFragment editorFragment = new MemeEditorFragment();
+        Bundle args = new Bundle();
+        args.putInt("TEMPLATE_IMAGE", imageResId); // A kiválasztott sablonkép ID-t átadjuk
+        editorFragment.setArguments(args);
+
+        getParentFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragmentContainerView, editorFragment) // Editor fragmentbe cseréljük
+                .addToBackStack(null)
+                .commit();
     }
 }

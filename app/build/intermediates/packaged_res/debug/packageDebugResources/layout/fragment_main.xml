@@ -1,14 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main">
+    android:background="#2196F3"
+    tools:context=".Main" >
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageButton
+        android:id="@+id/btnCreate"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="105dp"
+        android:backgroundTint="#000000"
+        android:hapticFeedbackEnabled="true"
+        android:scaleType="fitStart"
+        android:src="@drawable/plus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/txtViewCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto_bold"
+        android:hapticFeedbackEnabled="true"
+        android:text="Create Meme"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCreate" />
 
-</FrameLayout>
+    <ImageButton
+        android:id="@+id/btnGallery"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#000000"
+        android:hapticFeedbackEnabled="true"
+        android:scaleType="fitStart"
+        android:src="@drawable/gallery"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewTemplate" />
+
+    <TextView
+        android:id="@+id/txtViewGallery"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="92dp"
+        android:fontFamily="@font/roboto_bold"
+        android:hapticFeedbackEnabled="true"
+        android:text="Gallery"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGallery" />
+
+    <ImageButton
+        android:id="@+id/btnTemplate"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#000000"
+        android:hapticFeedbackEnabled="true"
+        android:scaleType="fitStart"
+        android:src="@drawable/templte"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewCreate" />
+
+    <TextView
+        android:id="@+id/txtViewTemplate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto_bold"
+        android:hapticFeedbackEnabled="true"
+        android:includeFontPadding="true"
+        android:text="Templates"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorLink="#000000"
+        android:textSize="24sp"
+        app:autoSizeTextType="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTemplate" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

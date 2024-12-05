@@ -20,9 +20,11 @@ import java.util.List;
 public class GalleryItemRecyclerViewAdapter extends RecyclerView.Adapter<GalleryItemRecyclerViewAdapter.ViewHolder> {
 
     private final List<Item> mValues;
+    private final GalleryItemRecyclerViewAdapter.OnGalleryClickListener onGalleryClickListener;
 
-    public GalleryItemRecyclerViewAdapter(List<Item> items) {
+    public GalleryItemRecyclerViewAdapter(List<Item> items, GalleryItemRecyclerViewAdapter.OnGalleryClickListener listener) {
         mValues = items;
+        onGalleryClickListener = listener;
     }
 
     @Override
@@ -33,13 +35,21 @@ public class GalleryItemRecyclerViewAdapter extends RecyclerView.Adapter<Gallery
     }
 
     @Override
-    public void onBindViewHolder(final ViewHolder holder, int position) {
+    public void onBindViewHolder(final GalleryItemRecyclerViewAdapter.ViewHolder holder, int position) {
         Item item = mValues.get(position);
         holder.memeTextView.setText(item.getTitle());
-        Glide.with(holder.itemView.getContext())
-                .load(item.getImage())
-                .into(holder.memeImageView);
+        holder.memeImageView.setImageResource(item.getImage());
+
+        // Kattintás kezelése
+        holder.itemView.setOnClickListener(v -> {
+            if (onGalleryClickListener != null) {
+                // Kiválasztott kép továbbítása
+                onGalleryClickListener.onGalleryClick(item.getImage());
+            }
+        });
     }
+
+
 
 
 
@@ -60,5 +70,9 @@ public class GalleryItemRecyclerViewAdapter extends RecyclerView.Adapter<Gallery
         }
 
 
+    }
+
+    public interface OnGalleryClickListener {
+        void onGalleryClick(int imageResId);
     }
 }
