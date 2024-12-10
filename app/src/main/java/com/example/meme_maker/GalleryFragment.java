@@ -102,6 +102,8 @@ public class GalleryFragment extends Fragment {
         args.putInt("TEMPLATE_IMAGE", imageResId); // A kiválasztott sablonkép ID-t átadjuk
         editorFragment.setArguments(args);
 
+        ((MainActivity)getActivity()).changeTitle("edit");
+
         getParentFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fragmentContainerView, editorFragment) // Editor fragmentbe cseréljük
