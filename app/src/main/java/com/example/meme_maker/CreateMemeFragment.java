@@ -51,7 +51,7 @@ public class CreateMemeFragment extends Fragment {
                     // A kamera által készített képet Bitmap formájában szerezhetjük be
                     Bundle extras = result.getData().getExtras();
                     Bitmap imageBitmap = (Bitmap) extras.get("data");
-
+                    ((MainActivity)getActivity()).changeTitle("edit");
                     // Átadjuk a képet a Fragment-nek
                     MemeEditorFragment fragment = new MemeEditorFragment();
                     Bundle bundle = new Bundle();
@@ -64,6 +64,7 @@ public class CreateMemeFragment extends Fragment {
                             .replace(R.id.fragmentContainerView, fragment)
                             .addToBackStack(null)
                             .commit();
+
                 }
             }
     );
@@ -73,7 +74,7 @@ public class CreateMemeFragment extends Fragment {
             result -> {
                 if (result.getResultCode() == Activity.RESULT_OK && result.getData() != null) {
                     Uri imageUri = result.getData().getData();
-
+                    ((MainActivity)getActivity()).changeTitle("edit");
                     if (imageUri != null) {
                         // Új Fragment példányosítása és a kép URI átadása
                         MemeEditorFragment fragment = new MemeEditorFragment();
@@ -87,6 +88,7 @@ public class CreateMemeFragment extends Fragment {
                                 .replace(R.id.fragmentContainerView, fragment) // fragmentContainer a hely, ahova a fragment kerül
                                 .addToBackStack(null) // Visszalépési lehetőség
                                 .commit();
+
                     }
                 }
             }
@@ -98,6 +100,7 @@ public class CreateMemeFragment extends Fragment {
 
         buttonBrowse = view.findViewById(R.id.btnBrowse);
         buttonCamera = view.findViewById(R.id.btnCamera);
+        ImageButton buttonTemplate = view.findViewById(R.id.btnTemplate);
 
         buttonCamera.setOnClickListener(v -> {
             Intent camIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -109,6 +112,11 @@ public class CreateMemeFragment extends Fragment {
             photoIntent.setType("image/*");
             galleryLauncher.launch(photoIntent);
         });
+
+        buttonTemplate.setOnClickListener((v -> {
+            ((MainActivity)getActivity()).loadFragmentAndAddToBackStack(new TemplateFragment(), "Templates");
+            ((MainActivity)getActivity()).changeTitle("template");
+        }));
 
 
 

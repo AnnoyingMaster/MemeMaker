@@ -9,7 +9,6 @@ import java.util.Date
 data class Templates(
     @PrimaryKey(autoGenerate = true) val id : Int,
     @ColumnInfo(name = "file_name") val name : String,
-    @ColumnInfo(name = "file_path") val path : String,
-    @ColumnInfo(name="created_at") val creationDate : Date,
-    @ColumnInfo(name="default_template") val default : Int,
+    @ColumnInfo(name = "created_at") val creationDate : Date,
+    @ColumnInfo(name = "default_template") val default : Int,
 )

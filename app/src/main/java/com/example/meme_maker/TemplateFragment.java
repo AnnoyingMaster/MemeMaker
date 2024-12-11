@@ -48,23 +48,23 @@ public class TemplateFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_gallery_list, container, false);
         memeList = new ArrayList<>();
 
-        memeList.add(new Item(R.drawable.memetemplate_3, "Allstars"));
-        memeList.add(new Item(R.drawable.memetemplate_5, "Face"));
-        memeList.add(new Item(R.drawable.memetemplate_6, "Gundog"));
-        memeList.add(new Item(R.drawable.memetemplate_7, "Finger"));
-        memeList.add(new Item(R.drawable.memetemplate_8, "Pingui"));
-        memeList.add(new Item(R.drawable.memetemplate_9, "Bunny"));
-        memeList.add(new Item(R.drawable.memetemplate_11, "Fist"));
-        memeList.add(new Item(R.drawable.memetemplate_12, "Gunda"));
-        memeList.add(new Item(R.drawable.memetemplate_13, "Sponge Pant"));
-        memeList.add(new Item(R.drawable.memetemplate_14, "Angry Bob"));
-        memeList.add(new Item(R.drawable.memetemplate_15, "Giga Bob"));
-        memeList.add(new Item(R.drawable.memetemplate_16, "Angrystein"));
-        memeList.add(new Item(R.drawable.memetemplate_17, "Shake"));
-        memeList.add(new Item(R.drawable.memetemplate_18, "Reload Cat"));
-        memeList.add(new Item(R.drawable.memetemplate_19, "Dog"));
-        memeList.add(new Item(R.drawable.memetemplate_20, "Dawg"));
-        memeList.add(new Item(R.drawable.memetemplate_21, "Kife Dog"));
+        memeList.add(new Item(R.drawable.temp_3, "Allstars"));
+        memeList.add(new Item(R.drawable.temp_5, "Face"));
+        memeList.add(new Item(R.drawable.temp_6, "Gundog"));
+        memeList.add(new Item(R.drawable.temp_7, "Finger"));
+        memeList.add(new Item(R.drawable.temp_8, "Pingui"));
+        memeList.add(new Item(R.drawable.temp_9, "Bunny"));
+        memeList.add(new Item(R.drawable.temp_11, "Fist"));
+        memeList.add(new Item(R.drawable.temp_12, "Gunda"));
+        memeList.add(new Item(R.drawable.temp_13, "Sponge Pant"));
+        memeList.add(new Item(R.drawable.temp_14, "Angry Bob"));
+        memeList.add(new Item(R.drawable.temp_15, "Giga Bob"));
+        memeList.add(new Item(R.drawable.temp_16, "Angrystein"));
+        memeList.add(new Item(R.drawable.temp_17, "Shake"));
+        memeList.add(new Item(R.drawable.temp_10, "Reload Cat"));
+        memeList.add(new Item(R.drawable.temp_2, "Dog"));
+        memeList.add(new Item(R.drawable.temp_1, "Dawg"));
+        memeList.add(new Item(R.drawable.temp_4, "Kife Dog"));
 
 
         templateRecyclerView = view.findViewById(R.id.templatesRecyclerView);
@@ -93,6 +93,8 @@ public class TemplateFragment extends Fragment {
         Bundle args = new Bundle();
         args.putInt("TEMPLATE_IMAGE", imageResId); // A kiválasztott sablonkép ID-t átadjuk
         editorFragment.setArguments(args);
+
+        ((MainActivity)getActivity()).changeTitle("edit");
 
         getParentFragmentManager()
                 .beginTransaction()

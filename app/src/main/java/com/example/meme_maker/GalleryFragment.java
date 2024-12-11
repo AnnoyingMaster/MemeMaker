@@ -53,23 +53,23 @@ public class GalleryFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_gallery_list, container, false);
         memeList = new ArrayList<>();
 
-        memeList.add(new Item( R.drawable.memetemplate_3, "" ));
-        memeList.add(new Item( R.drawable.memetemplate_5, "" ));
-        memeList.add(new Item( R.drawable.memetemplate_6, "" ));
-        memeList.add(new Item( R.drawable.memetemplate_7, "" ));
-        memeList.add(new Item( R.drawable.memetemplate_8, "" ));
-        memeList.add(new Item( R.drawable.memetemplate_9, "" ));
-        memeList.add(new Item( R.drawable.memetemplate_11, "" ));
-        memeList.add(new Item( R.drawable.memetemplate_12, "" ));
-        memeList.add(new Item( R.drawable.memetemplate_13, "" ));
-        memeList.add(new Item( R.drawable.memetemplate_14, "" ));
-        memeList.add(new Item( R.drawable.memetemplate_15, "" ));
-        memeList.add(new Item( R.drawable.memetemplate_16, "" ));
-        memeList.add(new Item( R.drawable.memetemplate_17, "" ));
-        memeList.add(new Item( R.drawable.memetemplate_18, "" ));
-        memeList.add(new Item( R.drawable.memetemplate_19, "" ));
-        memeList.add(new Item( R.drawable.memetemplate_20, "" ));
-        memeList.add(new Item( R.drawable.memetemplate_21, "" ));
+        memeList.add(new Item( R.drawable.temp_3, "" ));
+        memeList.add(new Item( R.drawable.temp_5, "" ));
+        memeList.add(new Item( R.drawable.temp_6, "" ));
+        memeList.add(new Item( R.drawable.temp_7, "" ));
+        memeList.add(new Item( R.drawable.temp_8, "" ));
+        memeList.add(new Item( R.drawable.temp_9, "" ));
+        memeList.add(new Item( R.drawable.temp_11, "" ));
+        memeList.add(new Item( R.drawable.temp_12, "" ));
+        memeList.add(new Item( R.drawable.temp_13, "" ));
+        memeList.add(new Item( R.drawable.temp_14, "" ));
+        memeList.add(new Item( R.drawable.temp_15, "" ));
+        memeList.add(new Item( R.drawable.temp_16, "" ));
+        memeList.add(new Item( R.drawable.temp_17, "" ));
+        memeList.add(new Item( R.drawable.temp_10, "" ));
+        memeList.add(new Item( R.drawable.temp_2, "" ));
+        memeList.add(new Item( R.drawable.temp_1, "" ));
+        memeList.add(new Item( R.drawable.temp_4, "" ));
 
 
 
@@ -101,6 +101,8 @@ public class GalleryFragment extends Fragment {
         Bundle args = new Bundle();
         args.putInt("TEMPLATE_IMAGE", imageResId); // A kiválasztott sablonkép ID-t átadjuk
         editorFragment.setArguments(args);
+
+        ((MainActivity)getActivity()).changeTitle("edit");
 
         getParentFragmentManager()
                 .beginTransaction()

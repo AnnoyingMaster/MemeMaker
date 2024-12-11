@@ -101,6 +101,9 @@ public class MainActivity extends AppCompatActivity {
             case "gallery":
                 setTitle("Gallery");
                 return true;
+            case "edit":
+                setTitle("Edit");
+                return true;
         }
         return true;
     }
