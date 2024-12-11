@@ -62,4 +62,15 @@
         android:max="96"/>
 
     </LinearLayout>
+
+    <EditText
+        android:id="@+id/fileNameEditText"
+        android:layout_width="174dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Fájl neve"
+        android:hint="Add meg a fájl nevét"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="84dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

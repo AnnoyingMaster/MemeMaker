@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.Flow
 interface MemesDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun  saveMeme(memes: Memes)
+     fun saveMeme(memes: Memes)
 
     @Update
     suspend fun updateMeme(memes: Memes)

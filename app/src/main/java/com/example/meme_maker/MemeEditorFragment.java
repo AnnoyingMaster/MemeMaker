@@ -26,11 +26,13 @@ import android.widget.Toast;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
+import java.util.Date;
+import java.util.concurrent.Executors;
 
 
 public class MemeEditorFragment extends Fragment{
     private ImageView memeImageView;
-    private EditText topTextEditText, bottomTextEditText;
+    private EditText topTextEditText, bottomTextEditText, fileNameEditText;
     private Button applyTextButton;
     private SeekBar fontSizeSeekBar;
 
@@ -43,6 +45,7 @@ public class MemeEditorFragment extends Fragment{
         bottomTextEditText = view.findViewById(R.id.bottomTextEditText);
         applyTextButton = view.findViewById(R.id.applyTextButton);
         fontSizeSeekBar = view.findViewById(R.id.fontSizeSeekBar);
+        fileNameEditText = view.findViewById(R.id.fileNameEditText);
 
         // A kapott kép ID betöltése
         if (getArguments() != null && getArguments().containsKey("TEMPLATE_IMAGE")) {
@@ -126,10 +129,20 @@ public class MemeEditorFragment extends Fragment{
     }
 
     private void saveBitmapAsJPG(Bitmap bitmap) {
-        String filename = "meme_" + System.currentTimeMillis() + ".jpg";
+        String userFileName = fileNameEditText.getText().toString().trim();
+        if(userFileName.isEmpty()){
+            showMessage("Adj meg egy képnevet");
+            return;
+        }
+
+        String formattedDate = new java.text.SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+
+        String filename = "meme_" +userFileName +"_" + formattedDate + ".jpg";
         OutputStream outputStream;
 
         try {
+            Uri uri = null;
+
             // Scoped Storage használata (Android 10+ kompatibilis)
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
                 ContentValues values = new ContentValues();
@@ -137,7 +150,7 @@ public class MemeEditorFragment extends Fragment{
                 values.put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg");
                 values.put(MediaStore.Images.Media.RELATIVE_PATH, "Pictures/MemeMaker");
 
-                Uri uri = requireContext().getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
+                uri = requireContext().getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
                 if (uri != null) {
                     outputStream = requireContext().getContentResolver().openOutputStream(uri);
                     bitmap.compress(Bitmap.CompressFormat.JPEG, 100, outputStream);
@@ -158,10 +171,23 @@ public class MemeEditorFragment extends Fragment{
                 outputStream.close();
                 showMessage("Kép sikeresen mentve: " + file.getAbsolutePath());
             }
+
+            saveMemeToDataBase(filename);
         } catch (Exception e) {
             e.printStackTrace();
             showMessage("Hiba a kép mentésekor: " + e.getMessage());
         }
+    }
+
+    private void saveMemeToDataBase(String fileName){
+        MemeDatabase db = MemeDatabase.getDatabase(requireContext());
+        MemesDao memesDao = db.memesDao();
+
+        Memes meme = new Memes(0, fileName, new Date());
+        Executors.newSingleThreadExecutor().execute(() -> {
+            memesDao.saveMeme(meme);
+
+        });
     }
 
     private void showMessage(String message) {
