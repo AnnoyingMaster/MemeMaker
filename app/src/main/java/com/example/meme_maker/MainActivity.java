@@ -1,5 +1,6 @@
 package com.example.meme_maker;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,9 +15,20 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import java.sql.Date;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
-//TODO: Meg kell csinálni dik : D 
+//TODO: Meg kell csinálni dik : D
+
+    private List<Item> templateList;
+
+    private TemplateDatabase templatesDb;
+    private SharedPreferences preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +39,29 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
+        templateList = new ArrayList<>();
+
+        templateList.add(new Item(R.drawable.temp_1, "Dawg"));
+        templateList.add(new Item(R.drawable.temp_2, "Dog"));
+        templateList.add(new Item(R.drawable.temp_3, "Allstars"));
+        templateList.add(new Item(R.drawable.temp_4, "Kife Dog"));
+        templateList.add(new Item(R.drawable.temp_5, "Face"));
+        templateList.add(new Item(R.drawable.temp_6, "Gundog"));
+        templateList.add(new Item(R.drawable.temp_7, "Finger"));
+        templateList.add(new Item(R.drawable.temp_8, "Pingui"));
+        templateList.add(new Item(R.drawable.temp_9, "Bunny"));
+        templateList.add(new Item(R.drawable.temp_10, "Reload Cat"));
+        templateList.add(new Item(R.drawable.temp_11, "Fist"));
+        templateList.add(new Item(R.drawable.temp_12, "Gunda"));
+        templateList.add(new Item(R.drawable.temp_13, "Sponge Pant"));
+        templateList.add(new Item(R.drawable.temp_14, "Angry Bob"));
+        templateList.add(new Item(R.drawable.temp_15, "Giga Bob"));
+        templateList.add(new Item(R.drawable.temp_16, "Angrystein"));
+        templateList.add(new Item(R.drawable.temp_17, "Shake"));
+
+        //populateDatabase();
+
         loadFragment(new Main(), "Főoldal", false);
         changeTitle("main");
 
@@ -35,6 +70,11 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        showCount(templatesDb.templatesDao().getTemplateCount());
+
+
+
     }
 
 
@@ -45,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    private void showMessage(String message) {
+    private void showCount(Integer message) {
         Toast.makeText(getApplicationContext(), message,
                 Toast.LENGTH_SHORT).show();
     }
@@ -107,6 +147,59 @@ public class MainActivity extends AppCompatActivity {
         }
         return true;
     }
+    private void populateDatabase() {
 
+        templatesDb = TemplateDatabase.getDatabase(getApplicationContext());
+
+        int count = templatesDb.templatesDao().getTemplateCount();
+
+        if (count == 0) {
+            // Feltöltjük a táblát előre megadott adatokkal
+
+            for (int i = 0; i < templateList.size();i++) {
+
+                LocalDate currentDate = LocalDate.now();
+                java.util.Date date = Date.from(currentDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+
+                String title = String.valueOf(templateList.get(i));
+
+                Templates template = new Templates(0, templateFileNameRemove(title), date, 1);
+                templatesDb.templatesDao().insert(template);
+            }
+        }
+    }
+
+    /*private void populateDatabase() {
+
+        templatesDb = TemplateDatabase.getDatabase(getApplicationContext());
+
+        int count = templatesDb.templatesDao().getTemplateCount();
+
+        if (count == 0) {
+            // Feltöltjük a táblát előre megadott adatokkal
+
+            for (int i = 0; i < templateList.size();i++) {
+
+                LocalDate currentDate = LocalDate.now();
+                java.util.Date date = Date.from(currentDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+
+                String title = String.valueOf(templateList.get(i));
+
+                Templates template = new Templates(0, templateFileNameRemove(title), date, 1);
+                templatesDb.templatesDao().insert(template);
+            }
+        }
+    }*/
+
+    private String templateFileNameRemove(String file){
+        String originalString = file;
+        int numberOfCharactersToRemove = 5; // Példa: eltávolítani az első 5 karaktert
+
+        if (originalString.length() > numberOfCharactersToRemove) {
+            String result = originalString.substring(numberOfCharactersToRemove);
+            return result;
+        }
+        return originalString;
+    }
 
 }

@@ -2,15 +2,14 @@ package com.example.meme_maker
 
 import androidx.room.Delete
 import androidx.room.Insert
-import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
 import kotlinx.coroutines.flow.Flow
 
 interface TemplatesDao {
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun  saveTemplate(templates: Templates)
+    @Insert
+    fun insert(template: Templates)
 
     @Update
     suspend fun updateTemplate(templates: Templates)
@@ -23,5 +22,8 @@ interface TemplatesDao {
 
     @Query("SELECT * FROM template_table")
     fun getAllTemplate() : Flow<List<Templates>>
+
+    @Query("SELECT COUNT(*) FROM template_table")
+    fun getTemplateCount(): Int
 
 }

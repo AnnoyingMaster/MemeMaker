@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.meme_maker"
-        minSdk 24
+        minSdk 26
         targetSdk 35
         versionCode 1
         versionName "1.0"
@@ -50,6 +50,7 @@ dependencies {
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
     implementation "androidx.appcompat:appcompat:$rootProject.appCompatVersion"
+    annotationProcessor "androidx.room:room-compiler:2.5.0"
 
     // Dependencies for working with Architecture components
     // You'll probably have to update the version numbers in build.gradle (Project)
